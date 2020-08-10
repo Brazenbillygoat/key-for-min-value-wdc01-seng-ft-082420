@@ -3,13 +3,15 @@
 
 def key_for_min_value(name_hash)
   p nil if name_hash = {}
-  min_value = name_hash
+  min_value = name_hash.first()
+  
   
   name_hash.each do |key, value|
-    
+    if value < min_value[1]
+      min_value = {key: value}
     
     
   end
   
-  
+  p min_value[0]
 end
